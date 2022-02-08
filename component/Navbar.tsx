@@ -19,6 +19,8 @@ function Navbar() {
                 top: "8px",
                 left: "51px",
                 borderRadius: "100px",
+                background: "#FFC600",
+                opacity: "0.9",
               }}
             >
               <img
