@@ -19,5 +19,10 @@ a {
   margin-top :4px;
 }
 .BoxFee{
+  
   background-color: #f2ee;
+  max-width: 255px;
+  height: 197px;
+  border-style: solid;
+ 
 }
