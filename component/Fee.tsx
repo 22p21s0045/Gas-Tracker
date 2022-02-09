@@ -3,14 +3,11 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import { Image, Shimmer } from "react-shimmer";
 import { ShimmerThumbnail } from "react-shimmer-effects";
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBBtn,
-  MDBContainer,
-} from "mdb-react-ui-kit";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
 import { MDBRow, MDBCol } from "mdb-react-ui-kit";
 function Fee() {
   async function getFee() {
@@ -35,38 +32,42 @@ function Fee() {
   let maps = array.map((item: any) => {
     return (
       <div>
-        <MDBContainer>
-          <MDBRow>
-            <MDBCol md="4">
-              <MDBCard
-                style={{ maxWidth: "255px", height: "197px" }}
-                className="BoxFee"
-              >
-                <MDBCardBody>
-                  <h1 style={{ textAlign: "center" }}>เร็ว</h1>
-                  <MDBCardText>{item.fastestFee}</MDBCardText>
-                </MDBCardBody>
-              </MDBCard>
-            </MDBCol>
-            <MDBCol md = '4'>
-              <MDBCard className="BoxFee">
-                <MDBCardBody>
-                  <h1 style={{ textAlign: "center" }}>ปกติ</h1>
-                  <MDBCardText>{item.halfHourFee}</MDBCardText>
-                </MDBCardBody>
-              </MDBCard>
-            </MDBCol>
-
-            <MDBCol>
-              <MDBCard className="BoxFee">
-                <MDBCardBody>
-                  <h1 style={{ textAlign: "center" }}>ช้า</h1>
-                  <MDBCardText >{item.hourFee}</MDBCardText>
-                </MDBCardBody>
-              </MDBCard>
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
+        <Card sx={{ maxWidth: 255, height: 197 }} className="BoxFee">
+          <CardActionArea>
+            <CardContent>
+              <Typography gutterBottom variant="h4" component="div">
+                เร็ว
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {item.fastestFee}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <Card sx={{ maxWidth: 255, height: 197 }} className="BoxFee">
+          <CardActionArea>
+            <CardContent>
+              <Typography gutterBottom variant="h4" component="div">
+                ปกติ
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {item.halfHourFee}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <Card sx={{ maxWidth: 255, height: 197 }} className="BoxFee">
+          <CardActionArea>
+            <CardContent>
+              <Typography gutterBottom variant="h4" component="div">
+                ช้า
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {item.hourFee}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
       </div>
     );
   });
