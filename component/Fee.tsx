@@ -9,6 +9,7 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBBtn,
+  MDBContainer,
 } from "mdb-react-ui-kit";
 import { MDBRow, MDBCol } from "mdb-react-ui-kit";
 function Fee() {
@@ -34,38 +35,43 @@ function Fee() {
   let maps = array.map((item: any) => {
     return (
       <div>
+        <MDBContainer>
           <MDBRow>
-        <MDBCol md="4" sm="4" lg="4" >
-          
-          <MDBCard style={{ maxWidth: '255px',height: '197px'}} className = "BoxFee">
-            <MDBCardBody >
-            <h1 style ={{textAlign: 'center'}}>เร็ว</h1>
-              <MDBCardText>{item.fastestFee}</MDBCardText>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-        <MDBCol md="4" sm="4" lg="4" >
-          
-          <MDBCard className = "BoxFee">
-            <MDBCardBody >
-            <h1 style ={{textAlign: 'center'}}>ปกติ</h1>
-              <MDBCardText>{item.halfHourFee}</MDBCardText>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-        <MDBCol md="4" sm="4" lg="4" className = "BoxFee">
-          <h1 style ={{textAlign: 'center'}}>ช้า</h1>
-          <MDBCard>
-            <MDBCardBody >
-              <MDBCardText>{item.hourFee}</MDBCardText>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-        </MDBRow>
-        </div>
+            <MDBCol md="4">
+              <MDBCard
+                style={{ maxWidth: "255px", height: "197px" }}
+                className="BoxFee"
+              >
+                <MDBCardBody>
+                  <h1 style={{ textAlign: "center" }}>เร็ว</h1>
+                  <MDBCardText>{item.fastestFee}</MDBCardText>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol>
+            <MDBCol md = '4'>
+              <MDBCard className="BoxFee">
+                <MDBCardBody>
+                  <h1 style={{ textAlign: "center" }}>ปกติ</h1>
+                  <MDBCardText>{item.halfHourFee}</MDBCardText>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol>
+
+            <MDBCol>
+              <MDBCard className="BoxFee">
+                <MDBCardBody>
+                  <h1 style={{ textAlign: "center" }}>ช้า</h1>
+                  <MDBCardText >{item.hourFee}</MDBCardText>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </div>
     );
   });
   return <div>{maps}</div>;
 }
 
 export default Fee;
+//TODO: Fix bug flex box-fee
