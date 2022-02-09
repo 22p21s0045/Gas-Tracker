@@ -8,7 +8,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import { MDBRow, MDBCol } from "mdb-react-ui-kit";
+import Grid from "@mui/material/Grid";
 function Fee() {
   async function getFee() {
     const { data } = await axios.get(
@@ -32,44 +32,80 @@ function Fee() {
   let maps = array.map((item: any) => {
     return (
       <div>
-        <Card sx={{ maxWidth: 255}} className="BoxFee">
-          <CardActionArea>
-            <CardContent>
-              <Typography gutterBottom variant="h4" component="div">
-                เร็ว
-              </Typography>
-              <Typography variant="body2" color="text.secondary" style ={{marginTop:20,fontSize:60}}>
-                {item.fastestFee +" Sat"}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 255 }} className="BoxFee">
-          <CardActionArea>
-            <CardContent>
-              <Typography gutterBottom variant="h4" component="div" >
-                ปกติ
-              </Typography>
-              <Typography variant="body2" color="text.secondary" style ={{marginTop:10,fontSize:60}}>
-                {item.halfHourFee+" Sat"} 
-                
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 255 }} className="BoxFee">
-          <CardActionArea>
-            <CardContent>
-              <Typography gutterBottom variant="h4" component="div">
-                ช้า
-              </Typography>
-              <Typography variant="body2" color="text.secondary" style ={{marginTop:20,fontSize:60}}>
-                {item.hourFee+" Sat"}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        
+        <Grid container spacing={2}>
+          <Grid item xs={4}>
+            <Card sx={{ maxWidth: 255 }} className="BoxFee">
+              <CardActionArea>
+                <CardContent>
+                  <Typography gutterBottom variant="h4" component="div">
+                    เร็ว
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    fontSize={{
+                      lg: 60,
+                      md: 60,
+                      sm: 60,
+                      xs: 40,
+                    }}
+                    style={{ marginTop: 20 }}
+                  >
+                    {item.fastestFee + " Sat"}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+          <Grid item xs={4}>
+            <Card sx={{ maxWidth: 255 }} className="BoxFee">
+              <CardActionArea>
+                <CardContent>
+                  <Typography gutterBottom variant="h4" component="div">
+                    ปกติ
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    fontSize={{
+                      lg: 60,
+                      md: 60,
+                      sm: 60,
+                      xs: 40
+                    }}
+                    style={{ marginTop: 10}}
+                  >
+                    {item.halfHourFee + " Sat"}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+          <Grid item xs={4}>
+            <Card sx={{ maxWidth: 255 }} className="BoxFee">
+              <CardActionArea>
+                <CardContent>
+                  <Typography gutterBottom variant="h4" component="div">
+                    ช้า
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    style={{ marginTop: 20}}
+                    fontSize={{
+                      lg: 60,
+                      md: 60,
+                      sm: 60,
+                      xs: 40
+                    }}
+                  >
+                    {item.hourFee + " Sat"}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        </Grid>
       </div>
     );
   });
