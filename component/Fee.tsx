@@ -32,42 +32,44 @@ function Fee() {
   let maps = array.map((item: any) => {
     return (
       <div>
-        <Card sx={{ maxWidth: 255, height: 197 }} className="BoxFee">
+        <Card sx={{ maxWidth: 255}} className="BoxFee">
           <CardActionArea>
             <CardContent>
               <Typography gutterBottom variant="h4" component="div">
                 เร็ว
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {item.fastestFee}
+              <Typography variant="body2" color="text.secondary" style ={{marginTop:20,fontSize:60}}>
+                {item.fastestFee +" Sat"}
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
-        <Card sx={{ maxWidth: 255, height: 197 }} className="BoxFee">
+        <Card sx={{ maxWidth: 255 }} className="BoxFee">
           <CardActionArea>
             <CardContent>
-              <Typography gutterBottom variant="h4" component="div">
+              <Typography gutterBottom variant="h4" component="div" >
                 ปกติ
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {item.halfHourFee}
+              <Typography variant="body2" color="text.secondary" style ={{marginTop:10,fontSize:60}}>
+                {item.halfHourFee+" Sat"} 
+                
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
-        <Card sx={{ maxWidth: 255, height: 197 }} className="BoxFee">
+        <Card sx={{ maxWidth: 255 }} className="BoxFee">
           <CardActionArea>
             <CardContent>
               <Typography gutterBottom variant="h4" component="div">
                 ช้า
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {item.hourFee}
+              <Typography variant="body2" color="text.secondary" style ={{marginTop:20,fontSize:60}}>
+                {item.hourFee+" Sat"}
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
+        
       </div>
     );
   });

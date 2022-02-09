@@ -32,7 +32,7 @@ function Navbar() {
             </Button>
           </Stack>
           <div className="Search">
-          <ReactSearchBox placeholder="🔎 Search TXID" onChange ={(value: string) =>console.log(value)}/>
+          <ReactSearchBox placeholder="Search TXID 🔎" onChange ={(value: string) =>console.log(value)}/>
           </div>
         </Toolbar>
         
