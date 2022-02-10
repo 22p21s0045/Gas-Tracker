@@ -1,7 +1,6 @@
 import React from "react";
 import { useQuery } from "react-query";
 import axios from "axios";
-import { Image, Shimmer } from "react-shimmer";
 import { ShimmerThumbnail } from "react-shimmer-effects";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -9,6 +8,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import Image from 'next/image';
 function Fee() {
   async function getFee() {
     const { data } = await axios.get(
@@ -33,7 +33,8 @@ function Fee() {
     return (
       <div>
         <Grid container spacing={2}>
-          <Grid item xs={4}>
+          <Grid item xs={6} md ={4}>
+            <Image src ="https://www.img.in.th/images/81545c959d0b6caeb6a469186806e6ee.gif" width ={200} height={200}  className ="ImageFee"/>
             <Card sx={{ maxWidth: 255 }} className="BoxFee">
               <CardActionArea>
                 <CardContent>
@@ -52,13 +53,16 @@ function Fee() {
                     style={{ marginTop: 20 }}
                   >
                     {item.fastestFee + " Sat"}
+                   
                   </Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={6} md ={4}>
+          <Image src ="https://www.img.in.th/images/7c2662759d6c8e88a66de2900974984c.gif" width ={200} height={200}  className ="ImageFee"/>
             <Card sx={{ maxWidth: 255 }} className="BoxFee">
+              
               <CardActionArea>
                 <CardContent>
                   <Typography gutterBottom variant="h4" component="div">
@@ -81,7 +85,9 @@ function Fee() {
               </CardActionArea>
             </Card>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={6} md ={4}>
+          <Image src ="https://www.img.in.th/images/ff70cf7ad7f59664d82983ae4a9b2627.gif" width ={200} height={200}  className ="ImageFee"/>
+
             <Card sx={{ maxWidth: 255 }} className="BoxFee">
               <CardActionArea>
                 <CardContent>

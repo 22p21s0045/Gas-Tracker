@@ -25,6 +25,11 @@ a {
   border-style: solid;
   text-align: center;
   display: grid;
-  margin-top: 239px;
+  
   margin-left:69px;
+}
+.ImageFee{
+ position: absolute;
+ 
+  
 }
