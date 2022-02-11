@@ -14,3 +14,22 @@ a {
 * {
   box-sizing: border-box;
 }
+.Search {
+  margin-left: 1500px;
+  margin-top: 4px;
+}
+.BoxFee {
+  background-color: #802fd1;
+  max-width: 255px;
+  height: 197px;
+  border-style: solid;
+  text-align: center;
+  display: grid;
+  
+  margin-left:69px;
+}
+.ImageFee{
+ position: absolute;
+ 
+  
+}
