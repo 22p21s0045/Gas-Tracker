@@ -16,8 +16,14 @@ function Fee() {
     );
     return data;
   }
+  async function getUsd(){
+    const {data} = await axios.get("https://freecurrencyapi.net/api/v2/latest?apikey=59010d40-8a88-11ec-8b46-e19fb8145318");
+    return data;
+  }
 
   const { data, error, isError, isLoading } = useQuery("fee", getFee);
+  const { data: usd, error: usderror, isError: usderrorisError, isLoading: usderrorisLoading } = useQuery("usd", getUsd);
+console.log(usd);
   if (isError) {
     return <div>Error</div>;
   }
