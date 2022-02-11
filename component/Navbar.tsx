@@ -6,7 +6,7 @@ import ReactSearchBox from "react-search-box";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import { useState } from "react";
-import Dropdown from 'react-bootstrap/Dropdown'
+import Dropdown from "react-bootstrap/Dropdown";
 function Navbar() {
   const [dropdow, setDropdow] = useState(false);
   function handleClick() {
@@ -39,19 +39,36 @@ function Navbar() {
             </Button>
           </Stack>
           <div className="Search">
-          <ReactSearchBox placeholder="Search TXID 🔎" onChange ={(value: string) =>console.log(value)}/>
+            <ReactSearchBox
+              placeholder="Search TXID 🔎"
+              onChange={(value: string) => console.log(value)}
+            />
           </div>
         </Toolbar>
-        
       </AppBar>
-      <Dropdown.Menu show ={dropdow}>
-  <Dropdown.Header>Dropdown header</Dropdown.Header>
-  <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-  <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-</Dropdown.Menu>
+      <Dropdown.Menu show={dropdow}>
+        <Dropdown.Header>เลือกเครือข่าย</Dropdown.Header>
+        <Dropdown.Item eventKey="2">
+          <img
+            src="https://www.img.in.th/images/349092f50f3b2479fa890dc5f2f2cfc8.png"
+            width="38px"
+            height="32px"
+            alt="Bitcoin logo"
+            className="IconSelector"
+          />{" "}
+          Bitcoin Mainnet
+        </Dropdown.Item>
+        <Dropdown.Item eventKey="3">
+          <img
+            src="https://www.img.in.th/images/0f6b06a68f053745ae474c083cca0213.png"
+            width="38px"
+            height="32px"
+            className="IconSelector"
+          />{" "}
+          Ethereum Mainnet
+        </Dropdown.Item>
+      </Dropdown.Menu>
     </Box>
-    
-    
   );
 }
 
