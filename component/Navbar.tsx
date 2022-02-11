@@ -5,7 +5,13 @@ import Toolbar from "@mui/material/Toolbar";
 import ReactSearchBox from "react-search-box";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import { useState } from "react";
+import Dropdown from 'react-bootstrap/Dropdown'
 function Navbar() {
+  const [dropdow, setDropdow] = useState(false);
+  function handleClick() {
+    setDropdow(!dropdow);
+  }
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" style={{ background: "#000", height: "70px" }}>
@@ -22,6 +28,7 @@ function Navbar() {
                 background: "#FFC600",
                 opacity: "0.9",
               }}
+              onClick={handleClick}
             >
               <img
                 src="https://www.img.in.th/images/349092f50f3b2479fa890dc5f2f2cfc8.png"
@@ -37,7 +44,14 @@ function Navbar() {
         </Toolbar>
         
       </AppBar>
+      <Dropdown.Menu show ={dropdow}>
+  <Dropdown.Header>Dropdown header</Dropdown.Header>
+  <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+  <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
+</Dropdown.Menu>
     </Box>
+    
+    
   );
 }
 
