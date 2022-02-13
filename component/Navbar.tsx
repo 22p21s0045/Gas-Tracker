@@ -7,8 +7,7 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
-import Link from 'next/link'
-function Navbar() {
+function Navbar(props:any) {
   const [dropdow, setDropdow] = useState(false);
   function handleClick() {
     setDropdow(!dropdow);
@@ -32,7 +31,7 @@ function Navbar() {
               onClick={handleClick}
             >
               <img
-                src="https://www.img.in.th/images/349092f50f3b2479fa890dc5f2f2cfc8.png"
+                src={props.logo}
                 alt="Bitcoin logo"
                 width="45px"
                 height="44px"

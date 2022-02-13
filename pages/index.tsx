@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   const query = new QueryClient();
   return (
     <div>
-      <Navbar />
+      <Navbar logo = "https://www.img.in.th/images/349092f50f3b2479fa890dc5f2f2cfc8.png"/>
       <QueryClientProvider client={query}>
         <Fee />
       </QueryClientProvider>
