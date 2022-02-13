@@ -52,7 +52,7 @@ function Fee() {
       </div>
     );
   }
-  let array: [] = [data];
+  let array: [any] = [data];
   let maps = array.map((item: any) => {
     return (
       <div>
