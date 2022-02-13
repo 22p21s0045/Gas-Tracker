@@ -2,13 +2,14 @@ import React from 'react'
 import Navbar from "../component/Navbar";
 import { useQuery } from "react-query";
 import axios from "axios";
-import { ShimmerThumbnail } from "react-shimmer-effects";
+
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Image from 'next/image';
+import Skeleton from "@mui/material/Skeleton";
 function FeeEth() {
   async function getEth() {
     const { data } = await axios.get(
@@ -24,7 +25,18 @@ function FeeEth() {
   if (isLoading) {
     return (
       <div>
-        <ShimmerThumbnail height={250} rounded />
+        <Skeleton variant="rectangular" width={10000} height={150} />
+        <Grid container spacing={2} style ={{marginTop: 100}}>
+          <Grid item xs={6} md={4}>
+            <Skeleton variant="rectangular" width={250} height={250} />
+          </Grid>
+          <Grid item xs={6} md={4}>
+            <Skeleton variant="rectangular" width={250} height={250} />
+          </Grid>
+          <Grid item xs={6} md={4}>
+            <Skeleton variant="rectangular" width={250} height={250} />
+          </Grid>
+        </Grid>
       </div>
     );
   }
