@@ -128,7 +128,7 @@ let maps = array.map((item: any) => {
   );
 });
 return <div>
-  <Navbar />
+  <Navbar logo = "https://www.img.in.th/images/0f6b06a68f053745ae474c083cca0213.png" />
   {maps}</div>;
 }
 
