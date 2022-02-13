@@ -7,6 +7,7 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
+import Link from 'next/link'
 function Navbar() {
   const [dropdow, setDropdow] = useState(false);
   function handleClick() {
@@ -48,7 +49,7 @@ function Navbar() {
       </AppBar>
       <Dropdown.Menu show={dropdow}>
         <Dropdown.Header>เลือกเครือข่าย</Dropdown.Header>
-        <Dropdown.Item eventKey="2">
+        <Dropdown.Item eventKey="2" href ="/">
           <img
             src="https://www.img.in.th/images/349092f50f3b2479fa890dc5f2f2cfc8.png"
             width="38px"
@@ -58,7 +59,7 @@ function Navbar() {
           />{" "}
           Bitcoin Mainnet
         </Dropdown.Item>
-        <Dropdown.Item eventKey="3">
+        <Dropdown.Item eventKey="3" href ="/FeeEth">
           <img
             src="https://www.img.in.th/images/0f6b06a68f053745ae474c083cca0213.png"
             width="38px"
