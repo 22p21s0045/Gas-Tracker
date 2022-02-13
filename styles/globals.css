@@ -25,11 +25,22 @@ a {
   border-style: solid;
   text-align: center;
   display: grid;
-  
-  margin-left:69px;
+
+  margin-left: 69px;
 }
-.ImageFee{
- position: absolute;
- 
-  
+.ImageFee {
+  position: absolute;
+}
+.IconSelector {
+  margin-left: 10px;
+}
+.BoxFeeEth {
+  background-color: #6e85b2;
+  max-width: 255px;
+
+  border-style: solid;
+  text-align: center;
+  display: grid;
+
+  margin-left: 69px;
 }
