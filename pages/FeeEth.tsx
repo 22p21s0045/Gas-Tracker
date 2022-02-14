@@ -47,7 +47,7 @@ let maps = array.map((item: any) => {
       <Grid container spacing={2}>
         <Grid item xs={6} md ={4}>
           <Image src ="https://www.img.in.th/images/ff70cf7ad7f59664d82983ae4a9b2627.gif" width ={200} height={200}  className ="ImageFee"/>
-          <Card sx={{ maxWidth: 255 }} className="BoxFeeEth">
+          <Card sx={{ maxWidth: 255 }} className="BoxFeeEth" style={{backgroundColor: "#916BBF"}}>
             <CardActionArea>
               <CardContent>
                 <Typography gutterBottom variant="h4" component="div">
@@ -73,7 +73,7 @@ let maps = array.map((item: any) => {
         </Grid>
         <Grid item xs={6} md ={4}>
         <Image src ="https://www.img.in.th/images/7c2662759d6c8e88a66de2900974984c.gif" width ={200} height={200}  className ="ImageFee"/>
-          <Card sx={{ maxWidth: 255 }} className="BoxFeeEth">
+          <Card sx={{ maxWidth: 255 }} className="BoxFeeEth" style={{backgroundColor: "#916BBF"}}>
             
             <CardActionArea>
               <CardContent>
@@ -100,7 +100,7 @@ let maps = array.map((item: any) => {
         <Grid item xs={6} md ={4}>
         <Image src ="https://www.img.in.th/images/81545c959d0b6caeb6a469186806e6ee.gif" width ={200} height={200}  className ="ImageFee"/>
 
-          <Card sx={{ maxWidth: 255 }} className="BoxFeeEth">
+          <Card sx={{ maxWidth: 255 }} className="BoxFeeEth" style={{backgroundColor: "#916BBF"}} >
             <CardActionArea>
               <CardContent>
                 <Typography gutterBottom variant="h4" component="div">
