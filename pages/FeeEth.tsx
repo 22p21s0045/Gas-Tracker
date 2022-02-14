@@ -10,7 +10,7 @@ import { CardActionArea } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Image from 'next/image';
 import Skeleton from "@mui/material/Skeleton";
-function FeeEth() {
+function FeeEth(props: any) {
   async function getEth() {
     const { data } = await axios.get(
       "https://owlracle.info/eth/gas?apikey=d99a766c2a9c45018c91907d6ff08821"
@@ -43,7 +43,7 @@ function FeeEth() {
 let array = [data];
 let maps = array.map((item: any) => {
   return (
-    <div>
+    <div key={item}>
       <Grid container spacing={2}>
         <Grid item xs={6} md ={4}>
           <Image src ="https://www.img.in.th/images/ff70cf7ad7f59664d82983ae4a9b2627.gif" width ={200} height={200}  className ="ImageFee"/>
