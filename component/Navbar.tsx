@@ -7,6 +7,7 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
+import SearchBar from "material-ui-search-bar";
 function Navbar(props:any) {
   const [dropdow, setDropdow] = useState(false);
   function handleClick() {
@@ -39,11 +40,7 @@ function Navbar(props:any) {
             </Button>
           </Stack>
           <div className="Search">
-            <ReactSearchBox
-              placeholder="Search TXID 🔎"
-              onChange={(value: string) => console.log(value)} data={[]} onSelect={function (record: any): void {
-                throw new Error("Function not implemented.");
-              } }            />
+            <SearchBar/>
           </div>
         </Toolbar>
       </AppBar>
