@@ -44,28 +44,34 @@ a {
 
   margin-left: 69px;
 }
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-.Providers {
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+.ProvidersHead {
+  text-align: center;
+  font-family: "Righteous", cursive;
+  font-size: 64px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 79px;
+
+  color: #310c0c;
+  padding-top: 31px;
+}
+.BoxProvider {
   width: 916px;
   height: 453px;
   margin-left: 262px;
   margin-top: 55px;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(100px);
-  font-family: 'Righteous', cursive;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 64px;
-  color: #310c0c;
-  text-align: center;
-  padding-top: 31px;
-  
-}
-.BoxProvider{
-  background: linear-gradient(180deg, rgba(196, 196, 196, 0.4) 0%, rgba(196, 196, 196, 0.1) 100%);
-border: 1px solid #FA0606;
-backdrop-filter: blur(100px);
-/* Note: backdrop-filter has minimal browser support */
 
-border-radius: 2000px;
+  background: linear-gradient(
+    180deg,
+    rgba(196, 196, 196, 0.4) 0%,
+    rgba(196, 196, 196, 0.1) 100%
+  );
+  border: 1px solid #fa0606;
+  backdrop-filter: blur(100px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 2000px;
 }
