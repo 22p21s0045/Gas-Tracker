@@ -7,6 +7,7 @@ import Fee from "../component/Fee";
 
 import FeeEth from "./FeeEth";
 import { QueryClient, QueryClientProvider } from "react-query";
+import Providers from "../component/Providers";
 const Home: NextPage = () => {
   const query = new QueryClient();
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       <Navbar logo = "https://www.img.in.th/images/349092f50f3b2479fa890dc5f2f2cfc8.png"/>
       <QueryClientProvider client={query}>
         <Fee />
+        <Providers/>
       </QueryClientProvider>
     </div>
   );
