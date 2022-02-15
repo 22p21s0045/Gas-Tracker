@@ -55,7 +55,7 @@ function Fee() {
   let array: [any] = [data];
   let maps = array.map((item: any) => {
     return (
-      <div>
+      <div className ="animate__swing">
         <Grid container spacing={2}>
           <Grid item xs={6} md={4}>
             <Image
