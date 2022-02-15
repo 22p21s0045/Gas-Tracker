@@ -8,6 +8,7 @@ import Fee from "../component/Fee";
 import FeeEth from "./FeeEth";
 import { QueryClient, QueryClientProvider } from "react-query";
 import Providers from "../component/Providers";
+import TsParticle from "../component/TsParticle";
 const Home: NextPage = () => {
   const query = new QueryClient();
   return (
@@ -16,7 +17,9 @@ const Home: NextPage = () => {
       <QueryClientProvider client={query}>
         <Fee />
         <Providers/>
+        <TsParticle/>
       </QueryClientProvider>
+      
     </div>
   );
 };
