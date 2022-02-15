@@ -35,7 +35,7 @@ a {
   margin-left: 10px;
 }
 .BoxFeeEth {
-  background-color: #6e85b2;
+  background-color: #916bbf;
   max-width: 255px;
 
   border-style: solid;
@@ -43,4 +43,41 @@ a {
   display: grid;
 
   margin-left: 69px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+.ProvidersHead {
+  text-align: center;
+  font-family: "Righteous", cursive;
+  font-size: 64px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 79px;
+
+  color: #310c0c;
+  padding-top: 31px;
+}
+.BoxProvider {
+  position : absolute;
+ 
+
+  
+  
+  margin-top: 55px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(196, 196, 196, 0.4) 0%,
+    rgba(196, 196, 196, 0.1) 100%
+  );
+  border: 1px solid #fa0606;
+  backdrop-filter: blur(100px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 2000px;
+}
+.ImageProvider{
+  height: auto;
+  width: auto;
 }

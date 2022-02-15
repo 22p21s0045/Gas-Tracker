@@ -55,7 +55,7 @@ function Fee() {
   let array: [any] = [data];
   let maps = array.map((item: any) => {
     return (
-      <div>
+      <div className ="animate__swing">
         <Grid container spacing={2}>
           <Grid item xs={6} md={4}>
             <Image
@@ -64,7 +64,7 @@ function Fee() {
               height={200}
               className="ImageFee"
             />
-            <Card sx={{ maxWidth: 255 }} className="BoxFee">
+            <Card sx={{ maxWidth: 255 }} className="BoxFee" style ={{backgroundColor: "#E9A6A6"}}>
               <CardActionArea>
                 <CardContent>
                   <Typography gutterBottom variant="h4" component="div">
@@ -94,7 +94,7 @@ function Fee() {
               height={200}
               className="ImageFee"
             />
-            <Card sx={{ maxWidth: 255 }} className="BoxFee">
+            <Card sx={{ maxWidth: 255 }} className="BoxFee" style ={{backgroundColor: "#E9A6A6"}}>
               <CardActionArea>
                 <CardContent>
                   <Typography gutterBottom variant="h4" component="div">
@@ -125,7 +125,7 @@ function Fee() {
               className="ImageFee"
             />
 
-            <Card sx={{ maxWidth: 255 }} className="BoxFee">
+            <Card sx={{ maxWidth: 255 }} className="BoxFee" style ={{backgroundColor: "#E9A6A6"}}>
               <CardActionArea>
                 <CardContent>
                   <Typography gutterBottom variant="h4" component="div">
