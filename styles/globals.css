@@ -59,9 +59,11 @@ a {
   padding-top: 31px;
 }
 .BoxProvider {
-  width: 916px;
-  height: 453px;
-  margin-left: 262px;
+  position : absolute;
+ 
+
+  
+  
   margin-top: 55px;
 
   background: linear-gradient(
@@ -74,4 +76,8 @@ a {
   /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 2000px;
+}
+.ImageProvider{
+  height: auto;
+  width: auto;
 }
