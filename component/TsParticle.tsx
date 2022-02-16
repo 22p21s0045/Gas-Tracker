@@ -18,7 +18,7 @@ function TsParticle() {
                 mode: "push",
               },
               onHover: {
-                enable: true,
+                enable: false,
                 mode: "repulse",
               },
               resize: true,
@@ -42,17 +42,10 @@ function TsParticle() {
           particles: {
             color: {
               value: "#573391",
+              
             },
-            links: {
-              color: "#ffffff",
-              distance: 150,
-              enable: true,
-              opacity: 0.5,
-              width: 1,
-            },
-            collisions: {
-              enable: true,
-            },
+            
+            
             move: {
               direction: "none",
               enable: true,
@@ -80,10 +73,7 @@ function TsParticle() {
             },
           },
           detectRetina: true,
-          images: {
-            enable: true,
-            src: "https://cf.shopee.co.th/file/f1f4c7cdb8f2f1a0a3a1d6d1e817c097"
-            },
+          
         }}
       />
     </div>
