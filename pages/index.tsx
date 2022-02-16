@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       <QueryClientProvider client={query}>
         <Fee />
         <Providers/>
-        <TsParticle/>
+        <TsParticle currency ="https://imgz.io/images/2022/02/16/opengraph.png"/>
       </QueryClientProvider>
       
     </div>

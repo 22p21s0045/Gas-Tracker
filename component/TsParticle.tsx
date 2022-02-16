@@ -1,6 +1,6 @@
 import React from "react";
 import Particles from "react-tsparticles";
-function TsParticle(prop:any) {
+function TsParticle(props:any) {
   return (
     <div className="Particlejs">
       <Particles
@@ -67,7 +67,7 @@ function TsParticle(prop:any) {
             shape: {
               type: "image",
               image: {
-                src: "https://imgz.io/images/2022/02/16/opengraph.png",
+                src: `${props.currency}`,
                 width: 100,
                 height: 100,
               },

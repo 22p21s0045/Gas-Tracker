@@ -11,6 +11,7 @@ import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import Skeleton from "@mui/material/Skeleton";
 import Providers from "../component/Providers";
+import TsParticle from "../component/TsParticle";
 function FeeEth(props: any) {
   async function getEth() {
     const { data } = await axios.get(
@@ -158,6 +159,7 @@ function FeeEth(props: any) {
       <Navbar logo="https://www.img.in.th/images/0f6b06a68f053745ae474c083cca0213.png" />
       {maps}
       <Providers />
+      <TsParticle currency ="https://imgz.io/images/2022/02/16/124-1245793_ethereum-eth-icon-ethereum-png-transparent-png-1.png"/>
     </div>
   );
 }
