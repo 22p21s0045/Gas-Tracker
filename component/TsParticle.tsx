@@ -1,6 +1,6 @@
 import React from "react";
 import Particles from "react-tsparticles";
-function TsParticle() {
+function TsParticle(prop:any) {
   return (
     <div className="Particlejs">
       <Particles
@@ -31,7 +31,7 @@ function TsParticle() {
                 size: 40,
               },
               push: {
-                quantity: 4,
+                quantity: 5,
               },
               repulse: {
                 distance: 200,
@@ -51,7 +51,7 @@ function TsParticle() {
               enable: true,
               outMode: "bounce",
               random: false,
-              speed: 0.5,
+              speed: 0.3,
               straight: false,
             },
             number: {
@@ -59,20 +59,26 @@ function TsParticle() {
                 enable: true,
                 area: 800,
               },
-              value: 80,
+              value: 20,
             },
             opacity: {
               value: 0.5,
             },
             shape: {
-              type: "circle",
+              type: "image",
+              image: {
+                src: "https://imgz.io/images/2022/02/16/opengraph.png",
+                width: 100,
+                height: 100,
+              },
             },
             size: {
               random: true,
-              value: 5,
+              value: 40,
             },
           },
           detectRetina: true,
+          
           
         }}
       />
